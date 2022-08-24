@@ -1,0 +1,172 @@
+.pageToDoList {
+    position: relative;
+    height: calc(100vh - 84px);
+    overflow: auto;
+    margin: 2px auto 0px;
+    width: 100%;
+    padding: 3px 1% 20px 0;
+
+    .article {
+        min-width: 300px;
+        max-width: 780px;
+        margin: 0 auto;
+        transition: 0.5s;
+
+        &Title {
+            font-size: 40px;
+            margin-bottom: 0.3em;
+            text-align: center;
+            font-weight: 600;
+            color: rgb(204, 204, 204);
+
+            @supports (-webkit-text-stroke: 1px rgb(0, 0, 0)) {
+                font-weight: 900;
+                -webkit-text-stroke: 1.5px rgb(16, 27, 88);
+            }
+        }
+
+        &Section_Create {
+            background: rgba(92, 92, 92, 0.801);
+            margin-bottom: 14px;
+            padding: 10px 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            position: sticky;
+            left: 0;
+            top: 0;
+            z-index: 2;
+
+            .otherOptions {
+                display: flex;
+                justify-content: flex-start;
+                gap: 8px;
+                flex-wrap: wrap;
+
+                .addTasksButton {
+                    padding: 4px;
+                    border: 2px solid rgba(255, 240, 213, 0.774);
+                    color: rgba(255, 240, 213, 0.774);
+                    background: #14549c;
+                    border-radius: 8px;
+                    font-size: 15px;
+                    width: max-content;
+                    cursor: pointer;
+
+                    &:hover {
+                        transform: scale(1.05) translateY(-2px);
+                        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.596);
+                    }
+                }
+
+                .trashOnButton {
+                    padding: 4px;
+                    border: 2px solid rgba(255, 240, 213, 0.774);
+                    color: rgba(255, 240, 213, 0.774);
+                    font-size: 31px;
+                    border-radius: 8px;
+                    background: #14549c;
+                    display: flex;
+                    align-items: center;
+                    cursor: pointer;
+
+                    svg {
+                        width: 1em;
+                        fill: currentColor;
+                        stroke: currentColor;
+                    }
+
+                    &:hover {
+                        transform: scale(1.05) translateY(-2px);
+                        box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.596);
+                    }
+
+                    &.trashMode {
+                        background: rgb(230, 175, 26);
+                        border: 2px solid rgb(70, 46, 42);
+                        color: rgb(70, 46, 42);
+                    }
+                }
+            }
+
+            .filters {
+                display: flex;
+                justify-content: flex-start;
+                gap: 8px;
+                flex-wrap: wrap;
+
+                select {
+                    width: max-content;
+                    height: 30px;
+                    border-radius: 12px;
+                    padding: 4px 6px;
+                    border: 1px solid rgba(255, 240, 213, 0.774);
+                    color: rgba(255, 240, 213, 0.774);
+                    background: #14549c;
+                }
+
+                .inputSearch {
+                    width: 150px;
+                    height: 30px;
+                    border-radius: 12px;
+                    padding: 2px 6px;
+                    border: 1px solid rgba(255, 240, 213, 0.774);
+                    color: rgba(255, 240, 213, 0.774);
+                    background: #14549c;
+
+                    &::placeholder {
+                        color: rgba(255, 240, 213, 0.774);
+                    }
+
+                    &:focus::placeholder {
+                        color: rgba(255, 240, 213, 0.4);
+                    }
+                }
+            }
+        }
+
+        &Section_Tasks {
+            background: rgba(249, 252, 255, 0.192);
+            text-align: center;
+            padding-top: 5px;
+            border-radius: 16px;
+            border-top: 6px solid #14549c;
+
+            &.trashMode {
+                background: rgba(235, 27, 89, 0.438);
+                border-top: 6px solid #d9a313;
+            }
+
+            h2 {
+                font-size: 26px;
+                text-shadow:
+                    0px 1px 1px rgba(255, 255, 255, 0.5),
+                    1px 0px 1px rgba(255, 255, 255, 0.5),
+                    -1px 0px 1px rgba(255, 255, 255, 0.5),
+                    0px -1px 1px rgba(255, 255, 255, 0.5),
+                ;
+            }
+
+            ul {
+                padding: 16px 3%;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                transition: 0.5s;
+
+                li {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        &SectionText {
+            margin-top: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: rgb(95, 95, 95);
+        }
+    }
+}

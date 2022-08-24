@@ -1,0 +1,121 @@
+.pageContacts {
+    padding: 4vh 3.2%;
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__content {
+        min-height: 100%;
+        width: 100%;
+        padding: 20px 1%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        border-radius: 5px;
+
+        &_headline {
+            display: inline-block;
+            width: fit-content;
+            color: #f0ab2c;
+            padding: 0px 5% 5px;
+            margin: 20px 0 50px;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 36px;
+            font-weight: 900;
+            line-height: 1.05em;
+            text-shadow: 0 2px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1);
+            background: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.5);
+            border-radius: 160px;
+
+            @supports (-webkit-text-stroke: 1.6px rgb(10, 47, 114)) {                
+                -webkit-text-stroke: 1.6px rgb(10, 47, 114);
+                -webkit-text-fill-color: rgb(233, 174, 24);
+                text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+            }
+        }
+
+        .article {
+            width: 100%;
+            display: flex;
+            flex: 0 0 auto;
+            flex-direction: column;
+            align-items: center;
+            max-width: max-content;
+            border-radius: 4px;
+            padding: 40px 3.8% 40px;
+            background: rgb(238, 219, 172);
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2), inset 0 0 35px 4px rgba(187, 135, 4, 0.65);
+
+            .mainInfo {
+                font-family: 'Roboto';
+                font-size: 19px;
+                font-weight: 700;
+                gap: 14px;
+                display: flex;
+                flex-direction: column;
+
+                .mainInfo_item {
+                    display: flex;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    gap: 8px;
+                    row-gap: 1px;
+
+                    @media screen and (max-width: 780px) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+
+                    &_title {
+                        background: rgba(255, 255, 255, 0.7);
+                        display: inline-block;
+                        line-height: 1.2;
+                        color: rgb(8, 71, 155);
+                        padding: 2px 5px 4px;
+                        border-radius: 6px;
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+
+                        svg{
+                            width: 1em;
+                            fill: currentColor;
+                            stroke: currentColor;
+                        }
+                    }
+
+                    &_text {
+                        display: flex;
+                        align-items: center;
+                        gap: 19px;
+                        font-size: 0.96em;
+
+                        a {
+                            padding: 0;
+                            border-radius: 5px;
+
+                            &:hover {
+                                outline: 3px solid rgba(4, 72, 160, 0.438);
+                                outline-offset: 1px;
+                                cursor: pointer;
+                                color: rgb(0, 60, 138);
+                            }
+
+                            &.logo {
+                                line-height: 0;
+
+                                img {
+                                    width: 29px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

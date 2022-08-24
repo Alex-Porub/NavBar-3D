@@ -1,0 +1,145 @@
+.pageAbout {
+    min-height: 100%;
+    padding: 40px 3%;
+
+    &__content {
+        min-height: 100%;
+        padding: 20px 1.5%;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 5px;
+        color: rgb(7, 49, 126);
+        font-weight: 600;
+        background: rgba(255, 247, 231, 0.65);
+        box-shadow: 0 0 25px 25px rgba(255, 247, 231, 0.65);
+
+        .pageAbout__header {
+            display: flex;
+            justify-content: center;
+            gap: 5%;
+            row-gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+
+            &_headline {
+                display: inline-block;
+                width: fit-content;
+                color: #f0ab2c;
+                padding: 0px 5% 5px;
+                margin: 6px 0 18px;
+                text-align: center;
+                letter-spacing: 1px;
+                font-size: 36px;
+                font-weight: 900;
+                line-height: 1.05em;
+                text-shadow: 0 2px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1);
+                background: rgba(255, 255, 255, 0.35);
+                box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.35);
+                border-radius: 160px;
+
+                @supports (-webkit-text-stroke: 1.6px rgb(10, 47, 114)) {                    
+                    -webkit-text-stroke: 1.6px rgb(10, 47, 114);
+                    -webkit-text-fill-color: rgb(233, 174, 24);
+                    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
+                }
+            }
+
+            &_foto {
+                width: 260px;
+                height: 260px;
+                border: 2px solid rgba(233, 174, 24, 0.884);
+                box-shadow: 2px 2px 16px 0 rgba(0, 0, 0, 0.65);
+                line-height: 0;
+                border-radius: 50%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+        }
+
+        .text {
+            margin-bottom: 36px;
+            font-size: 27px;
+            text-align: center;
+            padding: 10px 30px;
+            font-weight: 900;
+            color: #07317e;
+            line-height: 1.2em;
+        }
+
+        .article {
+            border-radius: 30px;
+            padding: 20px 3.8% 35px;
+            background: rgb(238, 219, 172);
+            box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2), inset 0 0 35px 4px rgba(187, 135, 4, 0.65);
+            font-size: 18px;
+            color: rgb(3, 34, 119);
+            display: flex;
+            flex-direction: column;
+
+            h2 {
+                margin-bottom: 30px;
+                font-size: 26px;
+                text-align: center;
+                color: #003496;
+                font-weight: bold;
+            }
+
+            &__skills {
+                padding: 0 8px 8px;
+                border-radius: 8px;
+                border: 2px solid rgb(16, 50, 165);
+                font-size: 18px;
+                margin-bottom: 30px;
+                background: rgba(255, 255, 255, 0.521);
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+
+                &_skillsHeadline {
+                    display: inline-block;
+                    line-height: 1em;
+                    margin: calc(0em - 0.5em - 5px) 2% 5px;
+                    background: #264580;
+                    padding: 4px 7px;
+                    font-weight: 600;
+                    letter-spacing: 0.05em;
+                    text-transform: uppercase;
+                    color: rgb(255, 249, 217);
+                    font-size: 17px;
+                    border-radius: 4px;
+                }
+
+                p {
+                    .highlightedRed {
+                        color: rgb(207, 0, 79);
+                    }
+                }
+            }
+
+            &__downloadCV {
+                display: inline-block;
+                padding: 3px 5px;
+                border: 2px solid #264580;
+                width: max-content;
+                align-self: center;
+                background: rgb(255, 234, 113);
+                color: #264580;
+                font-weight: 600;
+                transition: 0.1s;
+                box-shadow: 0 9px 5px -4px rgba(0, 0, 0, 0.3);
+
+                &:hover {
+                    background: #264580;
+                    color: rgb(255, 234, 113);
+                }
+            }
+        }
+    }
+}

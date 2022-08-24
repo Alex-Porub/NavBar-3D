@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Roboto+Slab:wght@300;400;500;700;900&display=swap');
+
+
+.App { 
+  background-color: #b3df96;
+  background-image: url(./images/bg/vintage-grunge-413.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  padding: 70px calc(30px - 40 * (1px - (100vw/1900))) 0 16%;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+
+  @media screen and (max-width: 1150px) {
+    padding: 70px 1% 0 1%;
+  }
+}
+
+main{
+  flex: 1 1 auto;
+  max-width: 100%;  
+  display: flex;
+  flex-direction: column;
+}
+
+.page{
+  
+  .pageHeadline{
+    font-size: 3rem;
+    text-align: center;
+    color: rgb(214, 10, 10);
+    text-shadow:
+      1.6px 1.6px 1.5px rgba(0, 0, 0, 0.6),
+      -1.6px 1.6px 1.5px rgba(0, 0, 0, 0.6),
+      1.6px -1.6px 1.5px rgba(0, 0, 0, 0.6),
+      -1.6px -1.6px 1.5px rgba(0, 0, 0, 0.6),;
+    font-weight: 600;
+    margin: 6px 8px 10px;
+  }
+}
