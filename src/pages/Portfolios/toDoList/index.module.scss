@@ -105,21 +105,67 @@
                     background: #14549c;
                 }
 
-                .inputSearch {
-                    width: 150px;
-                    height: 30px;
-                    border-radius: 12px;
-                    padding: 2px 6px;
-                    border: 1px solid rgba(255, 240, 213, 0.774);
-                    color: rgba(255, 240, 213, 0.774);
-                    background: #14549c;
+                .filterSearch {
+                    display: flex;
+                    align-items: center;
+                    position: relative;
 
-                    &::placeholder {
-                        color: rgba(255, 240, 213, 0.774);
+                    .inputSearch {
+                        width: 150px;
+                        height: 30px;
+                        border-radius: 12px;
+                        padding: 2px 6px;
+                        border: 1px solid rgba(255, 240, 213, 0.774);
+                        color: rgba(255, 240, 213, 1);
+                        background: #14549c;
+
+                        &::placeholder {
+                            color: rgba(255, 240, 213, 0.774);
+                        }
+
+                        &:focus::placeholder {
+                            color: rgba(255, 240, 213, 0.4);
+                        }
                     }
 
-                    &:focus::placeholder {
-                        color: rgba(255, 240, 213, 0.4);
+                    .buttonClear {
+                        position: absolute;
+                        right: 3px;
+                        top: calc((30px - 1.75em)/2);
+                        width: 1.5em;
+                        height: 1.75em;
+                        border-radius: 3px 45% 45% 3px;
+                        background-color: rgba(255, 255, 255, 0.8);
+                        cursor: pointer;
+                        opacity: 0.5;
+
+                        &:hover {
+                            opacity: 1;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            left: 3px;
+                            right: 3px;
+                            top: calc((100% - 2px)/2);
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            background-color: rgba(0, 0, 0, 0.9);
+                            transform: rotate(45deg);
+                        }
+
+                        &::after {
+                            position: absolute;
+                            left: 3px;
+                            right: 3px;
+                            top: calc((100% - 2px)/2);
+                            content: "";
+                            display: block;
+                            height: 2px;
+                            background-color: rgba(0, 0, 0, 0.9);
+                            transform: rotate(-45deg);
+                        }
                     }
                 }
             }
