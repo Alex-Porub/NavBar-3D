@@ -5,8 +5,9 @@ import cl from "./MyWorkLink.module.scss";
 
 const MyWorkLink = ({ work }) => {
 
+    
     const [observerRef, inView] = useInView({
-        threshold: 0.8,
+        threshold: 0.6,
     });
 
     return (

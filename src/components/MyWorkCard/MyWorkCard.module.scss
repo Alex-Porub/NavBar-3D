@@ -23,7 +23,7 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        padding: 0 28px;
+        padding: 0 20px;
         align-items: center;
         box-shadow: 0 10px 60px rgba(0, 0, 0, 0.6);
         transition: 0.5s;
@@ -46,8 +46,8 @@
         }
 
         &__content {
-            font-size: 17px;
-            line-height: 1.1em;
+            font-size: 16px;
+            line-height: 1.18em;
             font-weight: 600;
             position: relative;
             text-align: center;
@@ -109,7 +109,7 @@
     &.fullsize {
 
         .card {
-            height: 620px;
+            height: 590px;
 
             &__content {
                 top: -40px;

@@ -17,8 +17,10 @@ const Home = () => {
                 </h1>
                 
                     <p className={cl.text}>
-                        This site as a whole is worth looking at as a single large portfolio. But it also contains micro portfolios in the
-                        appropriate section. On the "Contacts" page you will find many ways to contact me.
+                    This site as a whole is worth looking at as a single large portfolio. 
+                    But it also contains micro portfolios in the appropriate section. 
+                    Some of them are made with React.js, the rest were written earlier in vanilla JS and included in the project.  
+                    On the "Contacts" page you will find many ways to contact me.
                     </p>
                
                 <article className={cl.article}>

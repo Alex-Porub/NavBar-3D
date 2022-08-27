@@ -1,16 +1,15 @@
 .inputPlus {
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 55px;
+    width: 100;
+    display: flex;
 
     &Value {
         background-color: lightgray;
-        border: none;
         border-radius: 8px 0 0 8px;
         outline: none;
-        padding: 8px 12px;
-        margin: 0;
+        min-width: 180px;
+        padding: 6px 10px;
         font: 1.2rem/1.4 "Roboto", sans-serif;
+        flex: 1 1 auto;
 
         &::placeholder {
             color: #7B7B7B;
@@ -18,8 +17,8 @@
         }
 
         &:focus-visible {
-            outline: 2px solid rgba(32, 104, 170, 0.747);
-            outline-offset: -2px;
+            outline: 3px solid #0252bb88;
+            outline-offset: -3px;
         }
 
         &:focus {
@@ -36,12 +35,9 @@
         background-size: 40%;
         border-radius: 0 8px 8px 0;
         cursor: pointer;
-        border: none;
+        border: 1px solid #d3d3d3c0;
         transition: 0.1s;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
+        flex: 0 0 55px;
 
         &:hover {
             background-size: 60%;
