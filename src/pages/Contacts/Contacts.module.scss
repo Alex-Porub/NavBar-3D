@@ -58,7 +58,7 @@
                 font-family: 'Roboto';
                 font-size: 19px;
                 font-weight: 700;
-                gap: 14px;
+                gap: 15px;
                 display: flex;
                 flex-direction: column;
 
@@ -67,7 +67,7 @@
                     align-items: center;
                     flex-wrap: wrap;
                     gap: 8px;
-                    row-gap: 1px;
+                    row-gap: 3px;
 
                     @media screen and (max-width: 780px) {
                         flex-direction: column;
@@ -96,11 +96,15 @@
                         display: flex;
                         align-items: center;
                         gap: 19px;
+                        row-gap: 5px;
                         font-size: 0.96em;
-                        // color: rgb(31, 31, 31);
-                        // font-style: italic;
+                        flex-wrap: wrap;
                         font-weight: 500;
-
+                        
+                        .logosBlock{
+                            display: flex;
+                            gap: 10px;
+                        }
                         a {
                             padding: 0;
                             border-radius: 5px;

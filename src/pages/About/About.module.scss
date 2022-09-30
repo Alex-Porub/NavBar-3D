@@ -95,6 +95,15 @@
                 font-weight: bold;
             }
 
+            p{
+                text-indent: 30px;
+                margin-bottom: 6px;
+
+                &:last-of-type{
+                    margin-bottom: 0;
+                }
+            }
+
             &__skills {
                 padding: 0 8px 8px;
                 border-radius: 8px;
@@ -121,6 +130,7 @@
                 }
 
                 p {
+                    text-indent: initial;
                     .highlightedRed {
                         color: rgb(207, 0, 79);
                     }

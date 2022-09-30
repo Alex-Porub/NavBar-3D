@@ -35,12 +35,14 @@ const Contacts = () => {
                         </span>
                         <span className={cl.mainInfo_item_text}>
                             <a href="tel:+380673955678">+38-067-395-56-78</a>
+                            <div className={cl.logosBlock}>
                             <a className={cl.logo} href="https://t.me/AlePoru" target="_blank" rel="noopener noreferrer">
                                 <img src={icon_telegram} /></a>
                             <a className={cl.logo} href="viber://chat?number=%2B380673955678" target="_blank" rel="noopener noreferrer">
                                 <img src={icon_viber} /></a>
                             <a className={cl.logo} href="https://wa.me/380673955678" target="_blank" rel="noopener noreferrer">
                                 <img src={icon_watsApp} /></a>
+                            </div>
                         </span>
                     </li>
                     <li className={cl.mainInfo_item}>
@@ -75,7 +77,7 @@ const Contacts = () => {
                         </span>
                         <span className={cl.mainInfo_item_text}>
                             <a href="http://www.Linkedin.com/in/oleksandr-porubinovskyi-048b96235" target="_blank">
-                                www.Linkedin.com/in/oleksandr-porubinovskyi-048b96235
+                                www.Linkedin.com/in/<wbr/>oleksandr-porubinovskyi-048b96235
                             </a>
                         </span>
                     </li>
@@ -86,7 +88,7 @@ const Contacts = () => {
                         </span>
                         <span className={cl.mainInfo_item_text}>
                             <a href="https://www.facebook.com/profile.php?id=100010143249535" target="_blank">
-                            https://www.facebook.com/profile.php?id=100010143249535
+                            https://www.facebook.com/<wbr/>profile.php?id=100010143249535
                             </a>
                         </span>
                     </li>

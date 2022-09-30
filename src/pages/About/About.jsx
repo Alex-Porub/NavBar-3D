@@ -25,11 +25,15 @@ const About = () => {
                     <p>
                         I was fond of programming since my studying at school. And I had successes in this field. But, at that moment, the
                         IT- industry wasn`t developed enough in Ukraine, so only true enthusiasts had the courage to be seriously engaged in
-                        programming. That’s why I worked in another field for a long time. After a few years, I realized that my
-                        understatement was not very appropriate for me, and I didn`t have the opportunity to realize my full potential. And
+                        programming. That’s why I worked in another field for a long time.
+                    </p>
+                    <p>
+                        After a few years, I realized that my understatement was not very appropriate for me, and I didn`t have the opportunity to realize my full potential. And
                         it came the idea to do something that fascinated me once indeed. Moreover, now there is a steady demand for these
-                        skills. Friends said: «Do what you like - and succeed!» It took me a long time, but eventually, I found the
-                        opportunity and the courage to change my profession. Contrary to my fears that «I won't be able» I graduated from IT
+                        skills. Friends said: «Do what you like - and succeed!»
+                    </p>
+                    <p>
+                        It took me a long time, but eventually, I found the opportunity and the courage to change my profession. Contrary to my fears that «I won't be able» I graduated from IT
                         courses with distinction (the 1st place in the course!). I did not quit my previous job but continued to improve my
                         skills in Front-End. Such it was in my childhood I like programming. At the moment, I finally decided to change
                         activities and engage in Front-End development. I`m ready for further training and development.

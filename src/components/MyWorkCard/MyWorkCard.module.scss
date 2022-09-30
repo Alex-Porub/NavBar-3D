@@ -88,6 +88,25 @@
         }
     }
 
+    @media screen and (max-width: 420px) {
+        .card {
+            width: 315px;
+            min-height: 300px;
+            height: 300px;
+    
+            &__imgBox {
+                width: 285px;
+                height: 285px;
+                min-width: 285px;
+                min-height: 285px;
+            }
+    
+            &__content {
+
+            } 
+        }
+    }
+
     &:hover {
 
         .card {
@@ -132,6 +151,12 @@
                     height: 1.7em;
                     transform: none;
                 }
+            }
+        }
+
+        @media screen and (max-width: 420px) {
+            .card {
+                height: 605px;
             }
         }
     }
