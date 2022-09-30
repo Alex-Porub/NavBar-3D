@@ -64,7 +64,7 @@ const ToDoList = () => {
             const value = prompt("The value must be in the range 0...100! How many tasks do you want to load?:");
             number = value ? parseInt(value) : 0;
         }
-        const path = `http://jsonplaceholder.typicode.com/todos?_limit=${number}`;
+        const path = `https://jsonplaceholder.typicode.com/todos?_limit=${number}`;
         let failureСounter = 0;
         const data = await fetchGET_byURL(path);
         data.forEach((task) => {
