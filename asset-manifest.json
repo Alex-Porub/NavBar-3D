@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/NavBar-3D/static/css/main.6f7bae62.css",
-    "main.js": "/NavBar-3D/static/js/main.07c4d4a5.js",
+    "main.css": "/NavBar-3D/static/css/main.48d41784.css",
+    "main.js": "/NavBar-3D/static/js/main.25f541f0.js",
     "static/media/vintage-grunge-413.jpg": "/NavBar-3D/static/media/vintage-grunge-413.7acc8cc89d2a899ad868.jpg",
     "static/media/CV-Front-End-Porub.pdf": "/NavBar-3D/static/media/CV-Front-End-Porub.cd534de35f6211a2b00b.pdf",
     "static/media/ukrainian-waving-flag-34.gif": "/NavBar-3D/static/media/ukrainian-waving-flag-34.16ab3122f5249f7ef0e1.gif",
@@ -23,11 +23,11 @@
     "static/media/plus.svg": "/NavBar-3D/static/media/plus.e4036d9b3dd7dcef3432.svg",
     "static/media/edit.svg": "/NavBar-3D/static/media/edit.3eeef240ec782ee03051.svg",
     "static/media/check.svg": "/NavBar-3D/static/media/check.f8f2583a80554b11b2f0.svg",
-    "main.6f7bae62.css.map": "/NavBar-3D/static/css/main.6f7bae62.css.map",
-    "main.07c4d4a5.js.map": "/NavBar-3D/static/js/main.07c4d4a5.js.map"
+    "main.48d41784.css.map": "/NavBar-3D/static/css/main.48d41784.css.map",
+    "main.25f541f0.js.map": "/NavBar-3D/static/js/main.25f541f0.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f7bae62.css",
-    "static/js/main.07c4d4a5.js"
+    "static/css/main.48d41784.css",
+    "static/js/main.25f541f0.js"
   ]
 }
