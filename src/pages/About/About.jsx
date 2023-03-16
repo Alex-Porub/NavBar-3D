@@ -2,8 +2,14 @@ import React from "react";
 // css
 import cl from "./About.module.scss";
 // href
-import downloadHref from "../../downloads/CV-Front-End-Porub.pdf"
-import myFotoHref from "../../images/fotos/foto-self1.jpg"
+import downloadHref from "../../downloads/CV-Front-End-Porub.pdf";
+import myFotoHref from "../../images/fotos/foto-self1.jpg";
+import iconHTML5 from "../../images/icons/html-5.png";
+import iconCSS from "../../images/icons/css-3.png";
+import iconJS from "../../images/icons/js.png";
+import iconSASS from "../../images/icons/sass.png";
+import iconREACT from "../../images/icons/atom.png";
+import iconVUE from "../../images/icons/vue.png";
 
 const About = () => {
     return (
@@ -12,7 +18,7 @@ const About = () => {
                 <div className={cl.pageAbout__header}>
                     <h1 className={cl.pageAbout__header_headline}>About me</h1>
                     <div className={cl.pageAbout__header_foto}>
-                        <img src={myFotoHref} />
+                        <img src={myFotoHref} alt="selfFoto" />
                     </div>
                 </div>
                 <p className={cl.text}>
@@ -28,15 +34,16 @@ const About = () => {
                         programming. That’s why I worked in another field for a long time.
                     </p>
                     <p>
-                        After a few years, I realized that my understatement was not very appropriate for me, and I didn`t have the opportunity to realize my full potential. And
-                        it came the idea to do something that fascinated me once indeed. Moreover, now there is a steady demand for these
-                        skills. Friends said: «Do what you like - and succeed!»
+                        After a few years, I realized that my understatement was not very appropriate for me, and I didn`t have the
+                        opportunity to realize my full potential. And it came the idea to do something that fascinated me once indeed.
+                        Moreover, now there is a steady demand for these skills. Friends said: «Do what you like - and succeed!»
                     </p>
                     <p>
-                        It took me a long time, but eventually, I found the opportunity and the courage to change my profession. Contrary to my fears that «I won't be able» I graduated from IT
-                        courses with distinction (the 1st place in the course!). I did not quit my previous job but continued to improve my
-                        skills in Front-End. Such it was in my childhood I like programming. At the moment, I finally decided to change
-                        activities and engage in Front-End development. I`m ready for further training and development.
+                        It took me a long time, but eventually, I found the opportunity and the courage to change my profession. Contrary to
+                        my fears that «I won't be able» I graduated from IT courses with distinction (the 1st place in the course!). I did
+                        not quit my previous job but continued to improve my skills in Front-End. Such it was in my childhood I like
+                        programming. At the moment, I finally decided to change activities and engage in Front-End development. I`m ready
+                        for further training and development.
                     </p>
                 </article>
                 <article className={cl.article}>
@@ -45,8 +52,15 @@ const About = () => {
                     <div className={cl.article__skills}>
                         <h3 className={cl.article__skills_skillsHeadline}>Professional skills</h3>
                         <p>
-                            html5 &nbsp; CSS &nbsp; SASS &nbsp; JavaScript ES6 &nbsp; React.js &nbsp; Gulp &nbsp; JQuery &nbsp; Git &nbsp;
-                            Adobe Photoshop &nbsp; Figma &nbsp; {"{"}Vue.js, Node.js, TypeScript{"}"} - basic knowledges
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconHTML5 + ")" }}>html5</span>&emsp;
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconCSS + ")" }}>CSS</span>&emsp;
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconSASS + ")" }}>SASS</span>&emsp;
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconJS + ")" }}>&nbsp;JavaScript&nbsp;ES6</span>&emsp;
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconREACT + ")" }}>React.js</span>&emsp;
+                            <span className={cl.skills_item} style={{ "--bgImage": "url(" + iconVUE + ")" }}>Vue.js</span><br />
+                            Gulp &emsp; JQuery &emsp; Git &emsp; Adobe Photoshop &emsp; Figma<br />
+                            Responsive, adaptive layout, REST API<br />
+                            {"{"}Node.js,  TypeScript, Express, MongoDB{"}"} - basic knowledges
                         </p>
                     </div>
 
@@ -58,7 +72,7 @@ const About = () => {
                     <div className={cl.article__skills}>
                         <h3 className={cl.article__skills_skillsHeadline}>Education</h3>
                         <p>
-                            2001 - Kyiv National University of Technologies and Design Master’s Degree in Electromechanics —{" "}
+                            2001 - Kyiv National University of Technologies and Design Master’s Degree in Electromechanics —&nbsp;
                             <span className={cl.highlightedRed}>graduated with distinction</span> <br />
                             2007 - State Higher Educational Institution Kyiv National Economic University named after Vadym Hetman —
                             Specialist’s Degree in Finance
@@ -68,7 +82,7 @@ const About = () => {
                     <div className={cl.article__skills}>
                         <h3 className={cl.article__skills_skillsHeadline}>Additional Education</h3>
                         <p>
-                            2020 - Hillel IT School, course Front-End Pro —{" "}
+                            2020 - Hillel IT School, course Front-End Pro —&nbsp;
                             <span className={cl.highlightedRed}>graduated with distinction</span>
                         </p>
                     </div>

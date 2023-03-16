@@ -33,11 +33,11 @@
                 font-size: 36px;
                 font-weight: 900;
                 line-height: 1.05em;
-                text-shadow: 0 3px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1), 
-                0px 1px 1px rgba(0, 0, 0, 1),
-                1px 0px 1px rgba(0, 0, 0, 1),
-                0px 0px 1px rgba(0, 0, 0, 1),
-                1px 1px 1px rgba(0, 0, 0, 1),;
+                text-shadow: 0 3px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1),
+                    0px 1px 1px rgba(0, 0, 0, 1),
+                    1px 0px 1px rgba(0, 0, 0, 1),
+                    0px 0px 1px rgba(0, 0, 0, 1),
+                    1px 1px 1px rgba(0, 0, 0, 1), ;
                 background: rgba(255, 255, 255, 0.35);
                 box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.35);
                 border-radius: 160px;
@@ -95,11 +95,11 @@
                 font-weight: bold;
             }
 
-            p{
+            p {
                 text-indent: 30px;
                 margin-bottom: 6px;
 
-                &:last-of-type{
+                &:last-of-type {
                     margin-bottom: 0;
                 }
             }
@@ -131,8 +131,47 @@
 
                 p {
                     text-indent: initial;
+
                     .highlightedRed {
                         color: rgb(207, 0, 79);
+                        line-height: 1.5em;
+                    }
+
+                    .skills_icon {
+                        // display: inline-block;
+                        margin-right: 0.2em;
+                        width: 1.5em;
+                        // height: 1.4em;
+                        position: relative;
+                        bottom: calc(0.5em - 1.5em/2);
+                        // margin-top: 0.75em;
+                    }
+
+                    .skills_item {
+                        position: relative;
+                        margin-left: 1.6em;
+                        display: inline-block;
+                        line-height: 1.7em;
+
+                        // border-top: 1px solid red;
+                        // border-bottom: 1px solid red;
+                        &::before {
+                            content: "";
+                            display: inline-block;
+                            width: 1.6em;
+                            height: 1.6em;
+                            // margin-right: 0.2em;
+                            background-image: var(--bgImage);
+                            background-position: center center;
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            position: absolute;
+                            left: calc(0em - 1.6em);
+                            // bottom: calc(0.5em - 1.5em/2);
+                            bottom: calc((1.7em - 1.5em)/2);
+                            // border: 1px solid rgb(5, 133, 37);
+
+                        }
                     }
                 }
             }
