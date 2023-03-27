@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function MyWorkCard({ work }) {
     const resizerFull = function (e) {
         const currWrap = e.target.closest(`.${cl.wrap}`);
+        const text = currWrap.querySelector(`.${cl.card__text}`);
         const brothers = currWrap.closest("ul").children;
         for (let el of brothers) {
             let wrap = el.children[0];
@@ -12,20 +13,22 @@ function MyWorkCard({ work }) {
                 wrap.classList.remove(`${cl.fullsize}`);
             }
         }
+        !currWrap.classList.contains(`${cl.fullsize}`) &&
+        text.style.setProperty("--scrollHeight", text.scrollHeight + "px");
         currWrap.classList.toggle(`${cl.fullsize}`);
     };
 
     return (
-        <div 
+        <div
             className={cl.wrap}
             onClick={resizerFull}
         >
             <h3>{work.title}</h3>
             <div className={cl.card}>
                 <div className={cl.card__imgBox}>
-                    <img src={work.imgSrc} />
+                    <img src={work.imgSrc} alt="sqreenshot of component" />
                 </div>
-                <div className={cl.card__content}>
+                <div className={cl.card__text}>
                     <p>{work.discription}</p>
                 </div>
                 <Link
