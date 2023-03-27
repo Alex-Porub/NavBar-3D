@@ -99,7 +99,7 @@ const About = () => {
                     <div className={cl.article__skills}>
                         <h3 className={cl.article__skills_skillsHeadline}>Experience</h3>
                         <p>
-                            I have 2.5 years of experience in writing code and HTML layout. I constantly study new materials and don`t stop
+                            I have 3 years of experience in writing code and HTML layout. I constantly study new materials and don`t stop
                             improving my existing skills. I have impressive experience in my previous job, where I have acquired the skills
                             of teamwork, communication with clients, paperwork, and many others.
                         </p>
