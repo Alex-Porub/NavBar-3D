@@ -1,6 +1,8 @@
 import React from "react";
 import cl from "./MyWorkCard.module.scss";
 import { Link } from "react-router-dom";
+//localisation
+import { useTranslation } from "react-i18next";
 
 function MyWorkCard({ work }) {
     const resizerFull = function (e) {
@@ -18,18 +20,21 @@ function MyWorkCard({ work }) {
         currWrap.classList.toggle(`${cl.fullsize}`);
     };
 
+    //the function for chosing the text for current language
+    const { t, i18n } = useTranslation();
+
     return (
         <div
             className={cl.wrap}
             onClick={resizerFull}
         >
-            <h3>{work.title}</h3>
+            <h3>{work.title[i18n.resolvedLanguage]}</h3>
             <div className={cl.card}>
                 <div className={cl.card__imgBox}>
                     <img src={work.imgSrc} alt="sqreenshot of component" />
                 </div>
                 <div className={cl.card__text}>
-                    <p>{work.discription}</p>
+                    <p>{work.discription[i18n.resolvedLanguage]}</p>
                 </div>
                 <Link
                     to={"/portfolios/" + work.href}
@@ -38,7 +43,7 @@ function MyWorkCard({ work }) {
                         e.stopPropagation();
                     }}
                 >
-                    GO
+                    {t("main.pages.portfolios.MyWorkCard.go")}
                 </Link>
             </div>
         </div>

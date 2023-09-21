@@ -4,28 +4,31 @@ import { useSelector } from "react-redux"
 import MyWorkCard from "../../components/MyWorkCard/MyWorkCard";
 // css
 import cl from "./Home.module.scss";
+//localisation
+import { useTranslation } from "react-i18next";
 
 const Home = () => {
 
     const works = useSelector(state => state.myWorks.works);
+    
+    //the function for chosing the text for current language
+    const { t, i18n } = useTranslation();
 
     return (
         <div className={`page ${cl.pageHome}`}>
             <div className={cl.pageHome__content}>
                 <h1 className={cl.headline}>
-                    The site for presenting my portfolios and contacts
+                    {t("main.pages.home.h1")}
                 </h1>
                 
                     <p className={cl.text}>
-                    This site as a whole is worth looking at as a single large portfolio. 
-                    But it also contains micro portfolios in the appropriate section. 
-                    Some of them are made with React.js, the rest were written earlier in vanilla JS and included in the project.  
-                    On the "Contacts" page you will find many ways to contact me.
+                    {t("main.pages.home.discription")}
                     </p>
                
                 <article className={cl.article}>
                     <h2>
-                        You can see my works there. <br /> You can also find him in the appropriate section of the app.
+                    {t("main.pages.home.myWorks.1")}<br />{t("main.pages.home.myWorks.2")}
+                        
                     </h2>
                     <ul className={cl.portfCardsWrap}>
                         {works.map((work) => (

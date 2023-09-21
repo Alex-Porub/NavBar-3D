@@ -2,11 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import cl from "./MyNavBar3D.module.scss";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+//localisation
+import { useTranslation } from "react-i18next";
 
-const MyNavBar3D = ({ items, header, isActive, setIsActive, isScreenLess_730 }) => {
+const MyNavBar3D = ({ items, isActive, setIsActive, isScreenLess_730 }) => {
     const ulRef = useRef();
     const [isNavBarMoving, setIsNavBarMoving] = useState(true);
     const itemActiveName = useSelector((state) => state.activePageName.name);
+     //the function for chosing the text for current language
+     const { t } = useTranslation();
 
     useEffect(() => {
         liActivator(itemActiveName);
@@ -61,7 +65,7 @@ const MyNavBar3D = ({ items, header, isActive, setIsActive, isScreenLess_730 }) 
         >
             <ul ref={ulRef}>
                 <div className={cl.navBar__header}>
-                    <span>{header}</span>
+                    <span>{t("main.navbar.header")}</span>
                 </div>
                 {items.map((item, i) => (
                     <li 
@@ -71,7 +75,7 @@ const MyNavBar3D = ({ items, header, isActive, setIsActive, isScreenLess_730 }) 
                       data-name={item.name}
                     >
                         <Link to={"/" + item.name} className={cl.navBar__item}>
-                            <div className={[cl.item__side, cl.front].join(" ")}>{item.name}</div>
+                            <div className={[cl.item__side, cl.front].join(" ")}>{t("main.navbar."+item.name)}</div>
                             <div className={[cl.item__side, cl.back].join(" ")}></div>
                             <div className={[cl.item__side, cl.left].join(" ")}></div>
                             <div className={[cl.item__side, cl.right].join(" ")}></div>

@@ -52,8 +52,7 @@
             &_foto {
                 width: 260px;
                 height: 260px;
-                border: 2px solid rgba(233, 174, 24, 0.884);
-                box-shadow: 2px 2px 16px 0 rgba(0, 0, 0, 0.65);
+                box-shadow: 3px 4px 20px 0 rgba(0, 0, 0, 0.6);
                 line-height: 0;
                 border-radius: 50%;
                 overflow: hidden;
@@ -95,77 +94,54 @@
                 font-weight: bold;
             }
 
-            p {
-                text-indent: 30px;
-                margin-bottom: 6px;
-
-                &:last-of-type {
-                    margin-bottom: 0;
-                }
-            }
-
-            &__skills {
-                padding: 0 8px 8px;
-                border-radius: 8px;
-                border: 2px solid rgb(16, 50, 165);
-                font-size: 18px;
-                margin-bottom: 30px;
-                background: rgba(255, 255, 255, 0.521);
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-
-                &_skillsHeadline {
-                    display: inline-block;
-                    line-height: 1em;
-                    margin: calc(0em - 0.5em - 5px) 2% 5px;
-                    background: #264580;
-                    padding: 4px 7px;
-                    font-weight: 600;
-                    letter-spacing: 0.05em;
-                    text-transform: uppercase;
-                    color: rgb(255, 249, 217);
-                    font-size: 17px;
-                    border-radius: 4px;
-                }
-
+            &_howICame{
                 p {
-                    text-indent: initial;
-
-                    .highlightedRed {
-                        color: rgb(207, 0, 79);
-                        line-height: 1.5em;
-                    }
-
-                    .skills_icon {
-                        margin-right: 0.2em;
-                        width: 1.5em;
-                        position: relative;
-                        bottom: calc(0.5em - 1.5em/2);
-                    }
-
-                    .skills_item {
-                        position: relative;
-                        margin-left: 1.6em;
-                        display: inline-block;
-                        line-height: 1.7em;
-
-                        &::before {
-                            content: "";
-                            display: inline-block;
-                            width: 1.6em;
-                            height: 1.6em;
-                            background-image: var(--bgImage);
-                            background-position: center center;
-                            background-repeat: no-repeat;
-                            background-size: contain;
-                            position: absolute;
-                            left: calc(0em - 1.6em);
-                            bottom: calc((1.7em - 1.5em)/2);
-                        }
+                    text-indent: 30px;
+                    margin-bottom: 6px;
+    
+                    &:last-of-type {
+                        margin-bottom: 0;
                     }
                 }
             }
+
+            .skills {
+                text-indent: initial;
+
+                .highlightedRed {
+                    color: rgb(207, 0, 79);
+                    line-height: 1.5em;
+                }
+
+                .skills_icon {
+                    margin-right: 0.2em;
+                    width: 1.5em;
+                    position: relative;
+                    bottom: calc(0.5em - 1.5em/2);
+                }
+
+                .skills_item {
+                    position: relative;
+                    margin-left: 1.6em;
+                    display: inline-block;
+                    line-height: 1.7em;
+
+                    &::before {
+                        content: "";
+                        display: inline-block;
+                        width: 1.6em;
+                        height: 1.6em;
+                        background-image: var(--bgImage);
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        position: absolute;
+                        left: calc(0em - 1.6em);
+                        bottom: calc((1.7em - 1.5em)/2);
+                    }
+                }
+            }
+
 
             &__downloadCV {
                 display: inline-block;
@@ -178,10 +154,45 @@
                 font-weight: 600;
                 transition: 0.1s;
                 box-shadow: 0 9px 5px -4px rgba(0, 0, 0, 0.3);
+                animation: buttonattention 3.5s linear infinite;
 
                 &:hover {
                     background: #264580;
                     color: rgb(255, 234, 113);
+                }
+
+                @keyframes buttonattention {
+                    0% {
+                        transform: none;
+                        box-shadow: 0 9px 5px -4px rgba(0, 0, 0, 0.3);
+                    }
+
+                    2% {
+                        transform: translate(-8px, -2px) scale(1.1);
+                    }
+
+                    4% {
+                        transform: translate(7px, -4px) scale(1.15);
+                        box-shadow: 0 11px 10px -2px rgba(0, 0, 0, 0.3);
+                    }
+
+                    6% {
+                        transform: translate(-6px, -3px) scale(1.15);
+                        box-shadow: 0 11px 10px -2px rgba(0, 0, 0, 0.3);
+                    }
+
+                    8% {
+                        transform: translate(4px, -1px) scale(1.1);
+                    }
+
+                    10% {
+                        transform: translate(-3px, 0px) scale(1.05);
+                    }
+
+                    12% {
+                        transform: none;
+                        box-shadow: 0 9px 5px -4px rgba(0, 0, 0, 0.3);
+                    }
                 }
             }
         }
