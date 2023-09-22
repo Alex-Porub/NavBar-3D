@@ -20,7 +20,6 @@ export default function MyLanguageSwitcher() {
         >
             <button className={cl.languageSwitcher__current + " " + cl["lang-" + i18n.resolvedLanguage]}
                 onClick={() => setIsLangSelectorOpened(!isLangSelectorOpened)}
-                style={{ "--lng": i18n.resolvedLanguage }}
             >
                 {i18n.resolvedLanguage}
             </button>

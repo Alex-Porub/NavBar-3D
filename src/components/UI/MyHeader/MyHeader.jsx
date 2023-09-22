@@ -1,6 +1,6 @@
 import React from "react";
 import cl from "./MyHeader.module.scss";
-import gifHref from "../../../images/gif/ukrainian-waving-flag-34.gif";
+// import gifHref from "../../../images/gif/ukrainian-waving-flag-34.gif";
 import { Link } from "react-router-dom";
 // localisation
 import { useTranslation } from 'react-i18next';
@@ -10,7 +10,7 @@ import MyLanguageSwitcher from "../MyLanguageSwitcher/MyLanguageSwitcher";
 const MyHeader = ({ isNavBarActiv, setIsNavBarActiv }) => {
     const { t } = useTranslation();
     return (
-        <header className={cl.header + " " + "plusPuddingForPopup"}>
+        <header className={cl.header + " plusPuddingForPopup"}>
             <button
                 className={cl.header__menuButton + (isNavBarActiv ? ` ${cl.menuOff}` : "")}
                 onClick={() => setIsNavBarActiv(!isNavBarActiv)}
