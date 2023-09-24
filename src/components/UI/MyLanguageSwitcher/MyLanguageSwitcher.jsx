@@ -13,10 +13,11 @@ export default function MyLanguageSwitcher() {
         i18n.changeLanguage(value);
         setIsLangSelectorOpened(false);
     }
-
+   
     return (
         <div
             className={cl.languageSwitcher}
+            style={{"--langsNumer":Object.keys(locales).length}}
         >
             <button className={cl.languageSwitcher__current + " " + cl["lang-" + i18n.resolvedLanguage]}
                 onClick={() => setIsLangSelectorOpened(!isLangSelectorOpened)}

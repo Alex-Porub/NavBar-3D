@@ -1,6 +1,6 @@
 .pageContacts {
-    padding: 4vh 3.2%;
-    flex: 1 1 auto;
+    // padding: 4vh 3.2%;
+    // flex: 1 1 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,31 +15,9 @@
         gap: 20px;
         border-radius: 5px;
 
-        &_headline {
-            display: inline-block;
-            width: fit-content;
-            color: #f0ab2c;
-            padding: 0px 5% 5px;
-            margin: 20px 0 50px;
-            text-align: center;
-            letter-spacing: 1px;
-            font-size: 36px;
-            font-weight: 900;
-            line-height: 1.05em;
-            text-shadow: 0 3px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1), 
-                0px 1px 1px rgba(0, 0, 0, 1),
-                1px 0px 1px rgba(0, 0, 0, 1),
-                0px 0px 1px rgba(0, 0, 0, 1),
-                1px 1px 1px rgba(0, 0, 0, 1),;
-            background: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.5);
-            border-radius: 160px;
-
-            @supports (-webkit-text-stroke: 1.6px rgb(10, 47, 114)) {
-                -webkit-text-stroke: 1.6px rgb(10, 47, 114);
-                -webkit-text-fill-color: rgb(233, 174, 24);
-                text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
-            }
+        .pageHeadline {
+            // margin: 20px 0 50px;
+            margin-bottom: 8vh;
         }
 
         .article {
@@ -85,7 +63,7 @@
                         align-items: center;
                         gap: 6px;
 
-                        svg{
+                        svg {
                             width: 1em;
                             fill: currentColor;
                             stroke: currentColor;
@@ -100,11 +78,12 @@
                         font-size: 0.96em;
                         flex-wrap: wrap;
                         font-weight: 500;
-                        
-                        .logosBlock{
+
+                        .logosBlock {
                             display: flex;
                             gap: 10px;
                         }
+
                         a {
                             padding: 0;
                             border-radius: 5px;

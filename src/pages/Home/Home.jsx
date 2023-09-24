@@ -12,21 +12,21 @@ const Home = () => {
     const works = useSelector(state => state.myWorks.works);
     
     //the function for chosing the text for current language
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     return (
         <div className={`page ${cl.pageHome}`}>
             <div className={cl.pageHome__content}>
-                <h1 className={cl.headline}>
+                <h1 className={cl.headline + " pageHeadline"}>
                     {t("main.pages.home.h1")}
                 </h1>
                 
-                    <p className={cl.text}>
+                    <p className={cl.text + " pageMainText"}>
                     {t("main.pages.home.discription")}
                     </p>
                
-                <article className={cl.article}>
-                    <h2>
+                <article className={cl.article + " article-sepia"}>
+                    <h2 className={"h2-article"}>
                     {t("main.pages.home.myWorks.1")}<br />{t("main.pages.home.myWorks.2")}
                         
                     </h2>

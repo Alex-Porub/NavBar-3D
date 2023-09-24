@@ -17,7 +17,7 @@ const Portfolios = () => {
     return (
         <div className={"page " + cl.pagePortfolios}>
             <div className={cl.pagePortfolios__content}>
-                <h1 className={cl.pagePortfolios__content_headline}>{t("main.pages.portfolios.h1")}</h1>
+                <h1 className={cl.pageHeadline + " pageHeadline"}>{t("main.pages.portfolios.h1")}</h1>
                 <ul className={cl.pagePortfolios__content_workLinksContainer}>
                     {works.map((work) => (
                         <li key={work.href}>

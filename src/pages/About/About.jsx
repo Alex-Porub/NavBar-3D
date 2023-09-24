@@ -24,16 +24,16 @@ const About = () => {
         <div className={`page ${cl.pageAbout}`}>
             <div className={cl.pageAbout__content}>
                 <div className={cl.pageAbout__header}>
-                    <h1 className={cl.pageAbout__header_headline}>{t("main.pages.about.h1")}</h1>
+                    <h1 className={cl.pageAbout__header_headline + " pageHeadline"}>{t("main.pages.about.h1")}</h1>
                     <div className={cl.pageAbout__header_foto}>
                         <img src={myFotoHref} alt="selfFoto" />
                     </div>
                 </div>
-                <p className={cl.text}>
+                <p className={cl.text + " pageMainText"}>
                     {t("main.pages.about.howIcame.header")}
                 </p>
-                <article className={cl.article + " " + cl.article_howICame}>
-                    <h2>{t("main.pages.about.intro")}</h2>
+                <article className={cl.article + " " + cl.article_howICame + " article-sepia"}>
+                    <h2 className={"h2-article"}>{t("main.pages.about.intro")}</h2>
                     <p>
                         {t("main.pages.about.howIcame.p1")}
                     </p>
@@ -44,8 +44,8 @@ const About = () => {
                         {t("main.pages.about.howIcame.p3")}
                     </p>
                 </article>
-                <article className={cl.article}>
-                    <h2>{t("main.pages.about.details.header")}</h2>
+                <article className={cl.article + " " + cl.article_details + " article-sepia"}>
+                    <h2 className={"h2-article"}>{t("main.pages.about.details.header")}</h2>
 
                     <MySkillsArticle title={t("main.pages.about.details.skills.title")}>
                         <p className={cl.skills}>
@@ -99,7 +99,7 @@ const About = () => {
                         </p>
                     </MySkillsArticle>
                     <a className={cl.article__downloadCV} href={downloadHref} download>
-                    {t("main.pages.about.details.download")}
+                    {t("main.pages.about.details.download.1")}&nbsp;{t("main.pages.about.details.download.2")}
                     </a>
                 </article>
             </div>

@@ -20,25 +20,67 @@
   }
 }
 
-main{
+main {
   flex: 1 1 auto;
-  max-width: 100%;  
+  max-width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.page{
-  
-  .pageHeadline{
-    font-size: 3rem;
-    text-align: center;
-    color: rgb(214, 10, 10);
-    text-shadow:
-      1.6px 1.6px 1.5px rgba(0, 0, 0, 0.6),
-      -1.6px 1.6px 1.5px rgba(0, 0, 0, 0.6),
-      1.6px -1.6px 1.5px rgba(0, 0, 0, 0.6),
-      -1.6px -1.6px 1.5px rgba(0, 0, 0, 0.6),;
-    font-weight: 600;
-    margin: 6px 8px 10px;
+.page {
+  padding: 3vh 2vw;
+  min-height: 100%;
+}
+
+.pageHeadline {
+  display: inline-block;
+  width: fit-content;
+  color: #f0ab2c;
+  padding: 0px 5% 5px;
+  margin: 6px 0 30px;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 30px;
+  font-weight: 900;
+  line-height: 1.09em;
+  text-shadow: 0 3px 7px rgba(0, 0, 0, 0.7), 0 0 3px rgba(0, 0, 0, 1),
+    0px 1px 1px rgba(0, 0, 0, 1),
+    1px 0px 1px rgba(0, 0, 0, 1),
+    0px 0px 1px rgba(0, 0, 0, 1),
+    1px 1px 1px rgba(0, 0, 0, 1), ;
+  background: rgba(255, 255, 255, 0.35);
+  box-shadow: 0 0 20px 20px rgba(255, 255, 255, 0.35);
+  border-radius: 160px;
+
+  @supports (-webkit-text-stroke: 1.6px rgb(10, 47, 114)) {
+    -webkit-text-stroke: 1.6px rgb(10, 47, 114);
+    -webkit-text-fill-color: rgb(233, 174, 24);
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
   }
+}
+
+.h2-article {
+  margin-bottom: 40px;
+  font-size: 22px;
+  text-align: center;
+  color: #07317e;
+  font-weight: 700;
+  line-height: 1.1em;
+}
+
+.article-sepia {
+  border-radius: 30px;
+  padding: 30px 3% 40px;
+  background: rgb(243, 226, 182);
+  box-shadow: 0 8px 18px 0 rgba(0, 0, 0, 0.2), inset 0 0 35px 4px rgba(187, 135, 4, 0.65);
+}
+
+.pageMainText {
+  margin-bottom: 36px;
+  font-size: 23px;
+  text-align: center;
+  padding: 10px 1%;
+  font-weight: 900;
+  color: #07317e;
+  line-height: 1.2em;
 }
