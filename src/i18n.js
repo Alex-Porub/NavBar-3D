@@ -9,6 +9,10 @@ i18n
   .init({
     debug: true,
     fallbackLng: 'en',
+    ns: ['translation', 'norrisJokes'],
+    defaultNS: 'translation'
+
   });
+
   // i18n.changeLanguage('ua');
 export default i18n;

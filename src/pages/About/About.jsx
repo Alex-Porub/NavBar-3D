@@ -3,8 +3,8 @@ import React from "react";
 // css
 import cl from "./About.module.scss";
 // href
-import downloadHref from "../../downloads/CV-Front-End-Porub.pdf";
-import myFotoHref from "../../images/fotos/foto-self1.jpg";
+import downloadHref from "../../downloads/cv.pdf";
+import myFotoHref from "../../images/fotos/foto-self5.png";
 import iconHTML5 from "../../images/icons/html-5.png";
 import iconCSS from "../../images/icons/css-3.png";
 import iconJS from "../../images/icons/js.png";

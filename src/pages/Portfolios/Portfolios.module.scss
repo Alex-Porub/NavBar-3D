@@ -10,6 +10,9 @@
         gap: 20px;
 
         .pageHeadline {
+            --bg_color: rgba(255, 255, 255, 0.45);
+            background: var(--bg_color);
+            box-shadow: 0 0 15px 15px var(--bg_color);
             margin-bottom: 8vh;
         }
 

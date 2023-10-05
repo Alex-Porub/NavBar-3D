@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import cl from "./MyLanguageSwitcher.module.scss";
-import { useTranslation } from 'react-i18next';
+//localisation
+import { useTranslation } from "react-i18next";
 
 export default function MyLanguageSwitcher() {
     const { t, i18n } = useTranslation();
     const [isLangSelectorOpened, setIsLangSelectorOpened] = useState(false);
     const locales = {
         en: { title: 'English' },
-        ua: { title: 'Українська' }
+        uk: { title: 'Українська' }
     };
     const setLanguage = function (value) {
         i18n.changeLanguage(value);
