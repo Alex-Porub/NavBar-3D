@@ -278,10 +278,14 @@ td.occuped {
     user-select: none;
 }
 
+
 .shipPositioner:hover {
-    transform: translate(-1px, -2px) scale(1.02);
-    filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.55)) hue-rotate(-50deg) grayscale(0.3);
-    animation: none;
+    @media (hover: hover) {
+        transform: translate(-1px, -2px) scale(1.02);
+        filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.55)) hue-rotate(-50deg) grayscale(0.3);
+        animation: none;
+    }
+    
 }
 
 .playbox .pressedBut {

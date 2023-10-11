@@ -14,17 +14,23 @@
         box-shadow: 0 0 25px 25px rgba(255, 247, 231, 0.65);
 
         .pageAbout__header {
+            max-width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
 
-            &_headline {}
+            &_headline {
+                
+            }
 
             &_foto {
-                width: 500px;
-                aspect-ratio: calc(500/360);
+                --sizeFoto: 500px;
+                --aspectRatio: calc(500/360);
+                width: var(--sizeFoto);
+                aspect-ratio: var(--aspectRatio);
                 line-height: 0;
+                position: relative;           
 
                 img {
                     width: 100%;

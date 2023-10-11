@@ -1,10 +1,9 @@
 import React from "react";
-// import { useInView } from "react-intersection-observer";
+
 // css
 import cl from "./About.module.scss";
 // href
 import downloadHref from "../../downloads/cv.pdf";
-import myFotoHref from "../../images/fotos/foto-self5.png";
 import iconHTML5 from "../../images/icons/html-5.png";
 import iconCSS from "../../images/icons/css-3.png";
 import iconJS from "../../images/icons/js.png";
@@ -14,6 +13,8 @@ import iconVUE from "../../images/icons/vue.png";
 import MySkillsArticle from "../../components/MySkillsArticle/MySkillsArticle";
 //localisation
 import { useTranslation } from "react-i18next";
+//components
+import SliderComp from "../../components/SliderComp/SliderComp";
 
 const About = () => {
 
@@ -25,9 +26,10 @@ const About = () => {
             <div className={cl.pageAbout__content}>
                 <div className={cl.pageAbout__header}>
                     <h1 className={cl.pageAbout__header_headline + " pageHeadline"}>{t("main.pages.about.h1")}</h1>
-                    <div className={cl.pageAbout__header_foto}>
+                    {/* <div className={cl.pageAbout__header_foto}>
                         <img src={myFotoHref} alt="selfFoto" />
-                    </div>
+                    </div> */}                   
+                    <SliderComp></SliderComp>
                 </div>
                 <p className={cl.text + " pageMainText"}>
                     {t("main.pages.about.howIcame.header")}
