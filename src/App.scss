@@ -41,7 +41,7 @@ main {
   margin: 6px 0 30px;
   text-align: center;
   letter-spacing: 1px;
-  font-size: 30px;
+  font-size: 32px;
   font-weight: 700;
   line-height: 1.09em;
   text-shadow: 0 4px 6px rgba(0, 0, 0, 0.6),
@@ -52,13 +52,26 @@ main {
     1px 1px 1px var(--stroke_color),
     2px 2px 2px rgba(0, 0, 0, 0.3);
   border-radius: 160px;
+  transform: translateX(20px);
+  animation: headDrifting 5s linear 0s infinite alternate;
 
-  // @supports (-webkit-text-stroke: 1.3px rgb(10, 47, 114)) {
-  //   font-weight: 900;
-  //   -webkit-text-stroke: 1.3px rgb(3, 33, 88);
-  //   -webkit-text-fill-color: rgb(233, 174, 24);
-  //   text-shadow: 0 2px 6px rgba(0, 0, 0, 0.65);
-  // }
+  @keyframes headDrifting {
+    0% {
+      transform: translateX(8px) translateY(0px);
+    }
+
+    30% {
+      transform: translateX(4px) translateY(4px);
+    }
+
+    70% {
+      transform: translateX(-4px) translateY(-4px);
+    }
+
+    100% {
+      transform: translateX(-8px) translateY(0px);
+    }
+  }
 }
 
 .h2-article {

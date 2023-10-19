@@ -59,6 +59,7 @@
             background-size: 90%;
             cursor: pointer;
             flex: 0 0 auto;
+            position: relative;
 
             &:hover {
                 transform: translateY(-2px);
@@ -81,7 +82,7 @@
                 font-size: 28px;
                 color: rgb(13, 95, 189);
 
-                svg{
+                svg {
                     width: 1em;
                     fill: currentColor;
                     stroke: currentColor;

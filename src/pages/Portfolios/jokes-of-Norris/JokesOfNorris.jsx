@@ -8,8 +8,6 @@ import { useTranslation } from "react-i18next";
 
 function JokesOfNorris() {
     const { t, i18n } = useTranslation();
-    // const tns=t.bind(null, { ns: 'norrisJokes' });
-    // const tns=()=>t(...arguments, { ns: 'norrisJokes' });
     const tns=function(){
         return t(...arguments, { ns: 'norrisJokes' });
     }

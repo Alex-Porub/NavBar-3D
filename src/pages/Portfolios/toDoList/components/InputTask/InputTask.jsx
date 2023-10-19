@@ -6,9 +6,11 @@ import { changeCompleted, removeTask, returnToMain, toTrash, updateTask } from "
 // css
 import styles from "./InputTask.module.scss";
 import "./otherstyles.scss";
+//localisation
+import { useTranslation } from "react-i18next";
 
 
-const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
+const InputTask = ({ id, title, createdAt, isChecked, isTrashMode }) => {
 
     const [inputValue, setInputValue] = useState(title);
     const [isEditMode, setIsEditMode] = useState(false);
@@ -16,9 +18,14 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
     const elem_p_Ref = useRef(null);
     const elem_input_Ref = useRef(null);
     const dispatch = useDispatch();
+    //localisation
+    const { t, i18n } = useTranslation();
+    const tns = function () {
+        return t(...arguments, { ns: 'toDo' });
+    }
 
     useEffect(() => {
-        if (elem_p_Ref.current){
+        if (elem_p_Ref.current) {
             const elem_p = elem_p_Ref.current;
             elem_p.innerText = taskValue;
         }
@@ -39,8 +46,8 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
         }
     }, [isEditMode]);
 
-    function saveChanges(){
-        dispatch(updateTask({id: id, title: inputValue}));
+    function saveChanges() {
+        dispatch(updateTask({ id: id, title: inputValue }));
         setTaskValue(inputValue);
         setIsEditMode(false);
     }
@@ -48,14 +55,14 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
     return (
         <div className={styles.inputTask + (isTrashMode ? ` ${styles.trashMode}` : "")}>
             <time title={`id: ${id}`} className={styles.inputTaskTime}>
-                Updated: &nbsp; {createdAt}
+                {tns("todo.inputTask.updated", "updated")}: &nbsp; {createdAt}
             </time>
             <div className={styles.inputTaskContainer}>
                 <input
                     type="checkbox"
                     className={styles.inputTaskContainerCheck}
-                    title={isChecked ? "completed" : "yet to be completed"}
-                    disabled={isEditMode||isTrashMode}
+                    title={isChecked ? tns("todo.inputTask.toolt-input-compl", "completed") : tns("todo.inputTask.toolt-input-notcompl", "not completed")}
+                    disabled={isEditMode || isTrashMode}
                     checked={isChecked}
                     onChange={() => {
                         dispatch(changeCompleted({ id: id, completed: !isChecked }));
@@ -79,23 +86,23 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
                     </Transition>
                 </div>
                 {isTrashMode ? (
-                    <button
-                    title="return to main"
-                    className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_return].join(" ")}
-                    onClick={()=>{dispatch(returnToMain(id))}}
+                    <button                        
+                        title={tns("todo.inputTask.toolt-return", "return")}
+                        className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_return].join(" ")}
+                        onClick={() => { dispatch(returnToMain(id)) }}
                     >
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><title>Return Up Back</title><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M112 160l-64 64 64 64"/><path d="M64 224h294c58.76 0 106 49.33 106 108v20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" d="M112 160l-64 64 64 64" /><path d="M64 224h294c58.76 0 106 49.33 106 108v20" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="32" /></svg>
                     </button>
-                ):(
+                ) : (
                     isEditMode ? (
                         <button
-                            title="save"
+                            title={tns("todo.inputTask.toolt-save", "save")}
                             className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_save].join(" ")}
                             onClick={saveChanges}
                         ></button>
                     ) : (
                         <button
-                            title="edit"
+                            title={tns("todo.inputTask.toolt-edit", "edit")}
                             className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_edit].join(" ")}
                             onClick={() => {
                                 setIsEditMode(true);
@@ -105,7 +112,7 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
                 )}
                 {isTrashMode ? (
                     <button
-                        title="remove"
+                        title={tns("todo.inputTask.toolt-remove", "remove")}
                         className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_remove].join(" ")}
                         onClick={() => {
                             dispatch(removeTask(id));
@@ -113,7 +120,7 @@ const InputTask = ({id, title, createdAt, isChecked, isTrashMode}) => {
                     ></button>
                 ) : (
                     <button
-                        title="remove to trash"
+                        title={tns("todo.inputTask.toolt-removeTo", "remove to trash")}
                         className={[styles.inputTaskContainerButton, styles.inputTaskContainerButton_remove].join(" ")}
                         onClick={() => {
                             dispatch(toTrash(id));

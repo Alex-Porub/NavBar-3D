@@ -3,17 +3,16 @@ import React from "react";
 // css
 import cl from "./About.module.scss";
 // href
-import downloadHref from "../../downloads/cv.pdf";
 import iconHTML5 from "../../images/icons/html-5.png";
 import iconCSS from "../../images/icons/css-3.png";
 import iconJS from "../../images/icons/js.png";
 import iconSASS from "../../images/icons/sass.png";
 import iconREACT from "../../images/icons/atom.png";
 import iconVUE from "../../images/icons/vue.png";
-import MySkillsArticle from "../../components/MySkillsArticle/MySkillsArticle";
 //localisation
 import { useTranslation } from "react-i18next";
 //components
+import MySkillsArticle from "../../components/MySkillsArticle/MySkillsArticle";
 import SliderComp from "../../components/SliderComp/SliderComp";
 
 const About = () => {
@@ -100,7 +99,7 @@ const About = () => {
                         {t("main.pages.about.details.addInfo.text.1")}
                         </p>
                     </MySkillsArticle>
-                    <a className={cl.article__downloadCV} href={downloadHref} download>
+                    <a className={cl.article__downloadCV} href={"/custom_static/cv.pdf"} download>
                     {t("main.pages.about.details.download.1")}&nbsp;{t("main.pages.about.details.download.2")}
                     </a>
                 </article>

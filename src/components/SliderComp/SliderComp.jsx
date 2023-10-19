@@ -21,6 +21,13 @@ const pictures = [
     'f-06.png',
     'f-07.png',
     'f-08.png',
+    'f-09.png',
+    'f-10.png',
+    'f-11.png',
+    'f-12.png',
+    'f-13.png',
+    'f-14.png',
+    'f-15.png',
 ]
 
 const swiperParams = {

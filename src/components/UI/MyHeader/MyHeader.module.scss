@@ -29,14 +29,18 @@
     cursor: pointer;
     box-shadow: 1px 2px 7px rgba(0, 0, 0, 0.6);
 
-    &:hover {
-      background: rgb(255, 200, 18);
-
-      span {
-        left: 15%;
-        right: 15%;
+    
+      &:hover {
+        @media (hover:hover) {
+        background: rgb(255, 200, 18);
+  
+        span {
+          left: 15%;
+          right: 15%;
+        }
       }
     }
+ 
 
     span {
       position: absolute;

@@ -51,19 +51,6 @@ export const myWorksSlice = createSlice({
 
             {
                 title: {
-                    en: "Cube in Box",
-                    uk: "Кубик у коробці",
-                },
-                discription: {
-                    en: "This funny toy allows you to move the cube in the container using keyboard arrows. Unfortunately, the touch screen is useless here. The cube that can move, jump and squat. When the cube hits the wall, it shakes the container. You can also stretch the container where the cube moves.  For this, you need to click on the bottom right corner and hold it while you change the size. See the pop-up tips. 😉",
-                    uk: "Ця кумедна іграшка дозволяє переміщати кубик у контейнері за допомогою стрілок на клавіатурі. На жаль, сенсорний екран тут безпорадний. Кубик, може рухатися, стрибати і присідати. Коли кубик вдаряється об стіну, він трясе контейнер. Ви також можете розтягувати контейнер.  Для цього потрібно натиснути на правий нижній кут і, утримуючи його, змінюйте розмір. Дивіться спливаючі підказки. 😉",
-                },
-                imgSrc: imgSrc_cubeInBox,
-                href: "cubeinbox",
-            },
-
-            {
-                title: {
                     en: "Form with custom elements",
                     uk: "Форма із кастомними елементами ",
                 },
@@ -73,6 +60,19 @@ export const myWorksSlice = createSlice({
                 },
                 imgSrc: imgSrc_formCustom,
                 href: "pagewithformcustom",
+            },
+
+            {
+                title: {
+                    en: "Cube in Box",
+                    uk: "Кубик у коробці",
+                },
+                discription: {
+                    en: "This funny toy allows you to move the cube in the container using keyboard arrows. Unfortunately, the touch screen is useless here. The cube that can move, jump and squat. When the cube hits the wall, it shakes the container. You can also stretch the container where the cube moves.  For this, you need to click on the bottom right corner and hold it while you change the size. See the pop-up tips. 😉",
+                    uk: "Ця кумедна іграшка дозволяє переміщати кубик у контейнері за допомогою стрілок на клавіатурі. На жаль, сенсорний екран тут безпорадний. Кубик, може рухатися, стрибати і присідати. Коли кубик вдаряється об стіну, він трясе контейнер. Ви також можете розтягувати контейнер.  Для цього потрібно натиснути на правий нижній кут і, утримуючи його, змінюйте розмір. Дивіться спливаючі підказки. 😉",
+                },
+                imgSrc: imgSrc_cubeInBox,
+                href: "cubeinbox",
             },
         ],
     },

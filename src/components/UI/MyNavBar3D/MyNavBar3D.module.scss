@@ -208,12 +208,14 @@ $transition_item: 0.5s;
             }
 
             &:hover {
-                transform: rotateY(-10deg);
+                @media (hover:hover) {
+                    transform: rotateY(-10deg);
 
-                .item__side.front {
-                    color: rgb(42, 69, 104);
-                    background-color: rgba(248, 213, 99, 0.801);
-                    text-shadow: 4px 0px 20px #ffffffec, -4px 0px 20px #ffffffec, 0px 0px 16px #ffffffad;
+                    .item__side.front {
+                        color: rgb(42, 69, 104);
+                        background-color: rgba(248, 213, 99, 0.801);
+                        text-shadow: 4px 0px 20px #ffffffec, -4px 0px 20px #ffffffec, 0px 0px 16px #ffffffad;
+                    }
                 }
             }
 

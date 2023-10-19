@@ -1,22 +1,18 @@
-import React, { useCallback, useState } from "react";
+import React, { useState } from "react";
 // css
 import styles from "./InputPlus.module.scss";
 
 const InputPlus = ({ onAdd, placeholder }) => {
+
     const [inputValue, setInputValue] = useState("");
-    const addTask = useCallback(() => {
-        onAdd(inputValue);
-        setInputValue("");
-    }, [inputValue]);
+
     return (
         <form
             className={styles.inputPlus}
             onSubmit={(e) => {
                 e.preventDefault();
-                addTask();
-            }}
-            onKeyDown={(e) => {
-                e.key == "Enter" && addTask();
+                onAdd(inputValue);
+                setInputValue("");
             }}
         >
             <input

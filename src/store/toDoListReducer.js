@@ -89,7 +89,10 @@ export const todoListSlice = createSlice({
             const id = action.payload;
             const index = state.tasks.findIndex((task)=>(task.id===id));
             const deletedTasks = state.tasks.splice(index, 1);
-            state.trashTasks.unshift(...deletedTasks);   
+            state.trashTasks.unshift(...deletedTasks);
+        },
+        emptyTrash: (state, action) => {
+            state.trashTasks =[];
         },
         returnToMain: (state, action) => {
             const id = action.payload;
@@ -117,5 +120,5 @@ export const todoListSlice = createSlice({
     }
   })
 
-export const { createTask, updateTask, removeTask, changeCompleted, addTasks, sortTasks_byDate, toTrash, returnToMain } = todoListSlice.actions;
+export const { createTask, updateTask, removeTask, changeCompleted, addTasks, sortTasks_byDate, toTrash, emptyTrash, returnToMain } = todoListSlice.actions;
 export default todoListSlice.reducer;
