@@ -27,7 +27,7 @@ const About = () => {
                     <h1 className={cl.pageAbout__header_headline + " pageHeadline"}>{t("main.pages.about.h1")}</h1>
                     {/* <div className={cl.pageAbout__header_foto}>
                         <img src={myFotoHref} alt="selfFoto" />
-                    </div> */}                   
+                    </div> */}
                     <SliderComp></SliderComp>
                 </div>
                 <p className={cl.text + " pageMainText"}>
@@ -68,7 +68,7 @@ const About = () => {
 
                     <MySkillsArticle title={t("main.pages.about.details.education.title")}>
                         <p className={cl.skills}>
-                        {t("main.pages.about.details.education.text.1")}&nbsp;
+                            {t("main.pages.about.details.education.text.1")}&nbsp;
                             <span className={cl.highlightedRed}>{t("main.pages.about.details.education.text.2")}</span> <br />
                             {t("main.pages.about.details.education.text.3")}
                         </p>
@@ -76,31 +76,31 @@ const About = () => {
 
                     <MySkillsArticle title={t("main.pages.about.details.addEducation.title")}>
                         <p className={cl.skills}>
-                        {t("main.pages.about.details.addEducation.text.1")}&nbsp;
+                            {t("main.pages.about.details.addEducation.text.1")}&nbsp;
                             <span className={cl.highlightedRed}>{t("main.pages.about.details.addEducation.text.2")}</span>
                         </p>
                     </MySkillsArticle>
 
                     <MySkillsArticle title={t("main.pages.about.details.lastJob.title")}>
                         <p className={cl.skills}>
-                        {t("main.pages.about.details.lastJob.text.1")} <br />
-                        {t("main.pages.about.details.lastJob.text.2")}
+                            {t("main.pages.about.details.lastJob.text.1")} <br />
+                            {t("main.pages.about.details.lastJob.text.2")}
                         </p>
                     </MySkillsArticle>
 
                     <MySkillsArticle title={t("main.pages.about.details.experience.title")}>
                         <p className={cl.skills}>
-                        {t("main.pages.about.details.experience.text.1")}
+                            {t("main.pages.about.details.experience.text.1")}
                         </p>
                     </MySkillsArticle>
 
                     <MySkillsArticle title={t("main.pages.about.details.addInfo.title")}>
                         <p className={cl.skills}>
-                        {t("main.pages.about.details.addInfo.text.1")}
+                            {t("main.pages.about.details.addInfo.text.1")}
                         </p>
                     </MySkillsArticle>
                     <a className={cl.article__downloadCV} href={"/custom_static/cv.pdf"} download>
-                    {t("main.pages.about.details.download.1")}&nbsp;{t("main.pages.about.details.download.2")}
+                        {t("main.pages.about.details.download.1")}&nbsp;{t("main.pages.about.details.download.2")}
                     </a>
                 </article>
             </div>
