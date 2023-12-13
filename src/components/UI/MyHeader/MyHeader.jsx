@@ -14,7 +14,7 @@ const MyHeader = ({ isNavBarActiv, setIsNavBarActiv }) => {
             <button
                 className={cl.header__menuButton + (isNavBarActiv ? ` ${cl.menuOff}` : "")}
                 onClick={() => setIsNavBarActiv(!isNavBarActiv)}
-                title={isNavBarActiv ? "menu OFF" : "menu ON"}
+                title={isNavBarActiv ? t('main.header.toolt-hideMenu', "hide menu") : t('main.header.toolt-showMenu', "show menu")}
             >
                 <span></span>
                 <span></span>
@@ -26,9 +26,6 @@ const MyHeader = ({ isNavBarActiv, setIsNavBarActiv }) => {
                 {t('main.header.author.lastName.others')}
             </Link>
             <MyLanguageSwitcher />
-            {/* <div className={cl.header__flag}>
-                <img src={gifHref} title="we are from Ukraine" alt="flag"/>
-            </div> */}
         </header>
     );
 };

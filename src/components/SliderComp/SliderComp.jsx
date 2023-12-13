@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import Swiper from 'swiper';
-import { Navigation, Pagination } from 'swiper/modules';
 import { register } from 'swiper/element/bundle';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -34,12 +32,8 @@ const swiperParams = {
     slidesPerView: 1,
     loop: true,
     speed: 100,
-    navigation: true,
-    pagination: true,
-    // scrollbar: true,
     spaceBetween: 15,
 };
-
 
 const slidesList = pictures.map((img, i) => (
     <swiper-slide key={(i + 1).toString()}><img className={cl.imgInner} src={sourceURL + img} alt="selfFoto" /></swiper-slide>
@@ -62,25 +56,12 @@ export default function SliderComp() {
         });
     }, [])
 
-
     return (
         <div className={cl.wrapper}>
             <div className={cl.outerBox}>
-
                 <swiper-container className={cl.container}>
                     {slidesList}
-                    {/* { slides.map((slide) => (
-                <swiper-slide key={slide.num.toString()}><img className={cl.imgInner} src={slide.url} alt="selfFoto" /></swiper-slide>
-                ))} */}
-                    {/* <swiper-slide><img className={cl.imgInner} src={myFotoHref_1} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={'/custom_static/fotosamples/f-02.jpg'} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={myFotoHref_3} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={myFotoHref_4} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={myFotoHref_5} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={myFotoHref_6} alt="selfFoto" /></swiper-slide>
-                <swiper-slide><img className={cl.imgInner} src={myFotoHref_7} alt="selfFoto" /></swiper-slide> */}
                 </swiper-container>
-                {/* <span className={cl.indexIndicator}>{realIndex + 1}</span> */}
             </div>
             <div className={cl.controlBar}>
                 <button className={cl.btn_slide_prev} onClick={() => { swiperInstance.swiper.slidePrev() }}>
@@ -88,14 +69,9 @@ export default function SliderComp() {
                 <span className={cl.indexIndicator}>{realIndex + 1}</span>
                 <button className={cl.btn_slide_next} onClick={() => { swiperInstance.swiper.slideNext() }}>
                     <svg width="11" height="20" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.38296 20.0762C0.111788 19.805 0.111788 19.3654 0.38296 19.0942L9.19758 10.2796L0.38296 1.46497C0.111788 1.19379 0.111788 0.754138 0.38296 0.482966C0.654131 0.211794 1.09379 0.211794 1.36496 0.482966L10.4341 9.55214C10.8359 9.9539 10.8359 10.6053 10.4341 11.007L1.36496 20.0762C1.09379 20.3474 0.654131 20.3474 0.38296 20.0762Z" fill="currentColor"></path></svg>
-
                 </button>
-
             </div>
-            {/* <span className={cl.indexIndicator}>{realIndex + 1}</span> */}
         </div>
     )
 }
-
-
 

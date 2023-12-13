@@ -10,7 +10,9 @@
                     "first": "П",
                     "others": "орубіновський"
                 }
-            }
+            },
+            "toolt-showMenu":"показати меню",
+            "toolt-hideMenu":"сховати меню"
         },
         "navbar": {
             "header": "меню",

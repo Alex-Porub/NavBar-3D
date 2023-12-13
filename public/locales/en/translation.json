@@ -10,7 +10,9 @@
                     "first": "P",
                     "others": "orubinovskyi"
                 }
-            }
+            },
+            "toolt-showMenu":"show menu",
+            "toolt-hideMenu":"hide menu"
         },
 
         "navbar": {
